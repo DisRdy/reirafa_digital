@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reirafa Digital — Creative Agency | Video Editing, Social Media, Digital Products</title>
+  <meta name="description" content="Reirafa Digital adalah agensi kreatif digital yang menawarkan layanan Video Editing, Manajemen Media Sosial, dan Produk Digital untuk brand kamu." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#2CBF7A',
+            dark: '#1C2E28',
+            offwhite: '#F7FDF9',
+            lightgreen: '#E6FAF3',
+            muted: '#5A7A6A',
+            footerbg: '#122218',
+          },
+          fontFamily: {
+            heading: ['Nunito', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-white text-dark font-body antialiased">
+
+  <!-- ============ 1. NAVBAR ============ -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
+      <!-- Logo -->
+      <a href="#" class="font-heading font-900 text-xl md:text-2xl tracking-tight text-dark">
+        Reirafa<span class="text-brand">Digital</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-dark/70">
+        <li><a href="#services" class="hover:text-brand transition-colors">Layanan</a></li>
+        <li><a href="#why-us" class="hover:text-brand transition-colors">Keunggulan</a></li>
+        <li><a href="#portfolio" class="hover:text-brand transition-colors">Portfolio</a></li>
+        <li><a href="#testimonials" class="hover:text-brand transition-colors">Testimoni</a></li>
+      </ul>
+
+      <!-- CTA + Hamburger -->
+      <div class="flex items-center gap-4">
+        <a href="#cta" class="hidden md:inline-flex items-center gap-2 bg-brand text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-brand/90 transition-colors">
+          Hubungi Kami
+        </a>
+        <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+          <span class="block w-6 h-0.5 bg-dark transition-transform origin-center" id="bar1"></span>
+          <span class="block w-6 h-0.5 bg-dark transition-opacity" id="bar2"></span>
+          <span class="block w-6 h-0.5 bg-dark transition-transform origin-center" id="bar3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100">
+      <ul class="flex flex-col px-6 py-4 gap-3 text-sm font-medium text-dark/70">
+        <li><a href="#services" class="block py-2 hover:text-brand transition-colors">Layanan</a></li>
+        <li><a href="#why-us" class="block py-2 hover:text-brand transition-colors">Keunggulan</a></li>
+        <li><a href="#portfolio" class="block py-2 hover:text-brand transition-colors">Portfolio</a></li>
+        <li><a href="#testimonials" class="block py-2 hover:text-brand transition-colors">Testimoni</a></li>
+        <li>
+          <a href="#cta" class="inline-flex items-center gap-2 bg-brand text-white text-sm font-semibold px-5 py-2.5 rounded-full mt-2">
+            Hubungi Kami
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ 2. HERO ============ -->
+  <section id="hero" class="min-h-screen flex items-center pt-24 md:pt-0 bg-offwhite relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full py-6 md:py-0">
+      <div class="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+        <!-- Left: Text -->
+        <div>
+
+          <h1 class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.08] tracking-tight text-dark mb-6">
+            Konten Keren,<br>
+            Brand Makin <span class="text-brand">Dikenal</span>
+          </h1>
+
+          <p class="hero-desc text-muted text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
+            Reirafa Digital hadir untuk bantu bisnis kamu tumbuh lewat video editing profesional, manajemen media sosial strategis, dan produk digital yang siap jual.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#cta" class="bg-dark text-white font-semibold px-7 py-3.5 rounded-full hover:bg-dark/90 transition-colors text-sm inline-flex items-center gap-2">
+              Mulai Proyek
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </a>
+            <a href="#services" class="text-dark font-semibold text-sm underline underline-offset-4 hover:text-brand transition-colors">
+              Lihat Layanan
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Photo Collage -->
+        <div class="relative hidden md:block h-[500px] lg:h-[560px] mt-20">
+          <!-- Main large image (top-left, tilted) -->
+          <div class="absolute top-0 left-0 w-[55%] h-[60%] rounded-2xl overflow-hidden rotate-[-3deg] shadow-lg z-10">
+            <img src="hero-1.png" alt="Tim Reirafa Digital berkolaborasi" class="w-full h-full object-cover" />
+          </div>
+
+          <!-- Top-right image -->
+          <div class="absolute top-16 right-0 w-[48%] h-[45%] rounded-2xl overflow-hidden rotate-[3deg] shadow-lg z-20">
+            <img src="hero-2.png" alt="Content creator editing video" class="w-full h-full object-cover" />
+          </div>
+
+          <!-- Bottom-right image -->
+          <div class="absolute bottom-4 right-8 w-[45%] h-[42%] rounded-2xl overflow-hidden rotate-[-2deg] shadow-lg z-10">
+            <img src="hero-3.png" alt="Videographer filming content" class="w-full h-full object-cover" />
+          </div>
+
+          <!-- Decorative badge -->
+          <div class="absolute bottom-[35%] left-[42%] z-30 w-20 h-20 bg-brand rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+            <div class="text-center text-white">
+              <p class="text-[10px] font-semibold leading-tight">REIRAFA</p>
+              <p class="text-[8px] leading-tight">DIGITAL</p>
+            </div>
+          </div>
+
+          <!-- Decorative stars -->
+          <svg class="absolute bottom-[20%] right-4 w-8 h-8 text-brand z-30" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4 5.6 21.2 8 14 2 9.2h7.6z"/></svg>
+          <svg class="absolute bottom-[15%] right-12 w-5 h-5 text-brand/50 z-30" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4 5.6 21.2 8 14 2 9.2h7.6z"/></svg>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES MARQUEE STRIP ============ -->
+  <div class="bg-dark py-4 overflow-hidden">
+    <div class="marquee-track flex items-center gap-8 whitespace-nowrap">
+      <span class="text-white font-heading font-bold text-sm uppercase tracking-wider">Video Editing</span>
+      <svg class="w-5 h-5 text-brand flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4 5.6 21.2 8 14 2 9.2h7.6z"/></svg>
+      <span class="text-white font-heading font-bold text-sm uppercase tracking-wider">Content Marketing</span>
+      <svg class="w-5 h-5 text-brand flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4 5.6 21.2 8 14 2 9.2h7.6z"/></svg>
+      <span class="text-white font-heading font-bold text-sm uppercase tracking-wider">Social Media Marketing</span>
+      <svg class="w-5 h-5 text-brand flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4 5.6 21.2 8 14 2 9.2h7.6z"/></svg>
+      <span class="text-white font-heading font-bold text-sm uppercase tracking-wider">Produk Digital</span>
+      <svg class="w-5 h-5 text-brand flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4 5.6 21.2 8 14 2 9.2h7.6z"/></svg>
+      <span class="text-white font-heading font-bold text-sm uppercase tracking-wider">Brand Strategy</span>
+      <svg class="w-5 h-5 text-brand flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4 5.6 21.2 8 14 2 9.2h7.6z"/></svg>
+      <!-- Duplicate for seamless loop -->
+      <span class="text-white font-heading font-bold text-sm uppercase tracking-wider">Video Editing</span>
+      <svg class="w-5 h-5 text-brand flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4 5.6 21.2 8 14 2 9.2h7.6z"/></svg>
+      <span class="text-white font-heading font-bold text-sm uppercase tracking-wider">Content Marketing</span>
+      <svg class="w-5 h-5 text-brand flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4 5.6 21.2 8 14 2 9.2h7.6z"/></svg>
+      <span class="text-white font-heading font-bold text-sm uppercase tracking-wider">Social Media Marketing</span>
+      <svg class="w-5 h-5 text-brand flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4 5.6 21.2 8 14 2 9.2h7.6z"/></svg>
+      <span class="text-white font-heading font-bold text-sm uppercase tracking-wider">Produk Digital</span>
+      <svg class="w-5 h-5 text-brand flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4 5.6 21.2 8 14 2 9.2h7.6z"/></svg>
+      <span class="text-white font-heading font-bold text-sm uppercase tracking-wider">Brand Strategy</span>
+      <svg class="w-5 h-5 text-brand flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4 5.6 21.2 8 14 2 9.2h7.6z"/></svg>
+    </div>
+  </div>
+
+  <!-- ============ 4. SERVICES ============ -->
+  <section id="services" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-12 fade-up">
+        <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-dark">Layanan Kami</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="fade-up bg-white border border-gray-100 rounded-2xl p-8 hover:border-brand/40 transition-colors group">
+          <div class="w-14 h-14 bg-brand rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887a.375.375 0 01.557-.328l5.603 3.113z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12z"/></svg>
+          </div>
+          <h3 class="font-heading font-bold text-xl mb-3 text-dark">Video Editing</h3>
+          <p class="text-muted text-sm leading-relaxed mb-5">Konten video profesional yang engaging dan siap boost performa brand kamu di semua platform.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-lightgreen text-dark px-3 py-1 rounded-full font-medium">Reels</span>
+            <span class="text-xs bg-lightgreen text-dark px-3 py-1 rounded-full font-medium">YouTube</span>
+            <span class="text-xs bg-lightgreen text-dark px-3 py-1 rounded-full font-medium">TikTok</span>
+            <span class="text-xs bg-lightgreen text-dark px-3 py-1 rounded-full font-medium">Ads</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="fade-up bg-white border border-gray-100 rounded-2xl p-8 hover:border-brand/40 transition-colors group" style="transition-delay: 0.1s">
+          <div class="w-14 h-14 bg-brand rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.4 48.4 0 005.887-.512c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.009z"/></svg>
+          </div>
+          <h3 class="font-heading font-bold text-xl mb-3 text-dark">Manajemen Media Sosial</h3>
+          <p class="text-muted text-sm leading-relaxed mb-5">Strategi konten dan manajemen akun yang konsisten untuk membangun presence brand kamu secara organik.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-lightgreen text-dark px-3 py-1 rounded-full font-medium">Instagram</span>
+            <span class="text-xs bg-lightgreen text-dark px-3 py-1 rounded-full font-medium">TikTok</span>
+            <span class="text-xs bg-lightgreen text-dark px-3 py-1 rounded-full font-medium">Strategy</span>
+            <span class="text-xs bg-lightgreen text-dark px-3 py-1 rounded-full font-medium">Analytics</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="fade-up bg-white border border-gray-100 rounded-2xl p-8 hover:border-brand/40 transition-colors group" style="transition-delay: 0.2s">
+          <div class="w-14 h-14 bg-brand rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg>
+          </div>
+          <h3 class="font-heading font-bold text-xl mb-3 text-dark">Produk Digital</h3>
+          <p class="text-muted text-sm leading-relaxed mb-5">Template, preset, dan produk digital berkualitas tinggi yang siap jual atau dipakai untuk brand kamu.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-lightgreen text-dark px-3 py-1 rounded-full font-medium">Template</span>
+            <span class="text-xs bg-lightgreen text-dark px-3 py-1 rounded-full font-medium">Preset</span>
+            <span class="text-xs bg-lightgreen text-dark px-3 py-1 rounded-full font-medium">E-book</span>
+            <span class="text-xs bg-lightgreen text-dark px-3 py-1 rounded-full font-medium">Assets</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. WHY US ============ -->
+  <section id="why-us" class="py-20 md:py-28 bg-dark">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16 fade-up">
+        <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-white">Yang Membuat Kami Beda</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="fade-up text-center p-6">
+          <p class="font-heading font-black text-5xl lg:text-6xl text-brand mb-3">48</p>
+          <p class="text-white font-heading font-bold text-lg mb-2">Jam Turnaround</p>
+          <p class="text-muted text-sm">Proyek selesai dalam hitungan jam, bukan minggu. Kecepatan tanpa kompromi kualitas.</p>
+        </div>
+        <div class="fade-up text-center p-6" style="transition-delay:0.1s">
+          <p class="font-heading font-black text-5xl lg:text-6xl text-brand mb-3">&#8734;</p>
+          <p class="text-white font-heading font-bold text-lg mb-2">Revisi Bebas</p>
+          <p class="text-muted text-sm">Revisi tanpa batas hingga kamu 100% puas dengan hasilnya. Tanpa biaya tambahan.</p>
+        </div>
+        <div class="fade-up text-center p-6" style="transition-delay:0.2s">
+          <p class="font-heading font-black text-5xl lg:text-6xl text-brand mb-3">50+</p>
+          <p class="text-white font-heading font-bold text-lg mb-2">Klien Puas</p>
+          <p class="text-muted text-sm">Dipercaya oleh lebih dari 50 brand dan kreator dari berbagai industri.</p>
+        </div>
+        <div class="fade-up text-center p-6" style="transition-delay:0.3s">
+          <p class="font-heading font-black text-5xl lg:text-6xl text-brand mb-3">24/7</p>
+          <p class="text-white font-heading font-bold text-lg mb-2">Support Aktif</p>
+          <p class="text-muted text-sm">Tim kami siap dihubungi kapan saja. Respons cepat, solusi tepat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. HOW WE WORK ============ -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16 fade-up">
+        <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-dark">Proses Kami</h2>
+      </div>
+
+      <!-- Steps -->
+      <div class="relative fade-up">
+        <!-- Connecting line (desktop) -->
+        <div class="hidden lg:block absolute top-8 left-[10%] right-[10%] h-0.5 bg-brand/30"></div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4">
+          <!-- Step 1 -->
+          <div class="text-center relative">
+            <div class="relative z-10 w-16 h-16 bg-brand text-white font-heading font-black text-xl rounded-full flex items-center justify-center mx-auto mb-4">1</div>
+            <h4 class="font-heading font-bold text-lg mb-2">Konsultasi</h4>
+            <p class="text-muted text-sm">Diskusi kebutuhan dan tujuan proyek kamu.</p>
+          </div>
+          <!-- Step 2 -->
+          <div class="text-center relative">
+            <div class="relative z-10 w-16 h-16 bg-brand text-white font-heading font-black text-xl rounded-full flex items-center justify-center mx-auto mb-4">2</div>
+            <h4 class="font-heading font-bold text-lg mb-2">Brief & Deal</h4>
+            <p class="text-muted text-sm">Menyusun brief dan kesepakatan proyek.</p>
+          </div>
+          <!-- Step 3 -->
+          <div class="text-center relative">
+            <div class="relative z-10 w-16 h-16 bg-brand text-white font-heading font-black text-xl rounded-full flex items-center justify-center mx-auto mb-4">3</div>
+            <h4 class="font-heading font-bold text-lg mb-2">Eksekusi</h4>
+            <p class="text-muted text-sm">Tim mulai mengerjakan proyek kamu.</p>
+          </div>
+          <!-- Step 4 -->
+          <div class="text-center relative">
+            <div class="relative z-10 w-16 h-16 bg-brand text-white font-heading font-black text-xl rounded-full flex items-center justify-center mx-auto mb-4">4</div>
+            <h4 class="font-heading font-bold text-lg mb-2">Revisi</h4>
+            <p class="text-muted text-sm">Review dan revisi hingga sempurna.</p>
+          </div>
+          <!-- Step 5 -->
+          <div class="text-center relative">
+            <div class="relative z-10 w-16 h-16 bg-brand text-white font-heading font-black text-xl rounded-full flex items-center justify-center mx-auto mb-4">5</div>
+            <h4 class="font-heading font-bold text-lg mb-2">Deliver</h4>
+            <p class="text-muted text-sm">File final dikirim, siap dipublish.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. PORTFOLIO ============ -->
+  <section id="portfolio" class="py-20 md:py-28 bg-offwhite">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-12 fade-up">
+        <h2 class=" font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-dark">Hasil Karya Kami</h2>
+      </div>
+
+      <!-- Filters -->
+      <div class="flex flex-wrap justify-center gap-3 mb-12 fade-up">
+        <button class="filter-btn active bg-brand text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors" data-filter="all">Semua</button>
+        <button class="filter-btn bg-white text-dark border border-gray-200 text-sm font-semibold px-5 py-2 rounded-full hover:border-brand hover:text-brand transition-colors" data-filter="video">Video</button>
+        <button class="filter-btn bg-white text-dark border border-gray-200 text-sm font-semibold px-5 py-2 rounded-full hover:border-brand hover:text-brand transition-colors" data-filter="sosmed">Media Sosial</button>
+        <button class="filter-btn bg-white text-dark border border-gray-200 text-sm font-semibold px-5 py-2 rounded-full hover:border-brand hover:text-brand transition-colors" data-filter="digital">Digital</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+        <!-- Item 1 -->
+        <div class="port-card fade-up group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer" data-cat="video">
+          <div class="absolute inset-0 bg-dark"></div>
+          <!-- Fake thumbnail pattern -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-16 h-16 border-2 border-brand rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6 text-brand" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <div class="w-32 h-2 bg-muted/30 rounded mx-auto mb-2"></div>
+              <div class="w-20 h-2 bg-muted/20 rounded mx-auto"></div>
+            </div>
+          </div>
+          <!-- Hover overlay -->
+          <div class="absolute inset-0 bg-brand/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h4 class="text-white font-heading font-bold text-lg mb-2">Brand Video Campaign</h4>
+            <span class="text-white/80 text-xs bg-white/20 px-3 py-1 rounded-full">Video Editing</span>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="port-card fade-up group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer" data-cat="sosmed" style="transition-delay:0.1s">
+          <div class="absolute inset-0 bg-[#1a3a2a]"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center">
+              <div class="grid grid-cols-3 gap-2 mb-3">
+                <div class="w-10 h-10 bg-muted/20 rounded-lg"></div>
+                <div class="w-10 h-10 bg-brand/30 rounded-lg"></div>
+                <div class="w-10 h-10 bg-muted/20 rounded-lg"></div>
+                <div class="w-10 h-10 bg-brand/30 rounded-lg"></div>
+                <div class="w-10 h-10 bg-muted/20 rounded-lg"></div>
+                <div class="w-10 h-10 bg-muted/20 rounded-lg"></div>
+              </div>
+              <div class="w-24 h-2 bg-muted/30 rounded mx-auto"></div>
+            </div>
+          </div>
+          <div class="absolute inset-0 bg-brand/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h4 class="text-white font-heading font-bold text-lg mb-2">Instagram Feed Design</h4>
+            <span class="text-white/80 text-xs bg-white/20 px-3 py-1 rounded-full">Media Sosial</span>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="port-card fade-up group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer" data-cat="digital" style="transition-delay:0.2s">
+          <div class="absolute inset-0 bg-[#0f2119]"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-20 h-28 border border-muted/30 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                <div class="space-y-1.5">
+                  <div class="w-12 h-1.5 bg-brand/40 rounded"></div>
+                  <div class="w-10 h-1.5 bg-muted/20 rounded"></div>
+                  <div class="w-14 h-1.5 bg-muted/20 rounded"></div>
+                  <div class="w-8 h-1.5 bg-brand/30 rounded"></div>
+                </div>
+              </div>
+              <div class="w-20 h-2 bg-muted/30 rounded mx-auto"></div>
+            </div>
+          </div>
+          <div class="absolute inset-0 bg-brand/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h4 class="text-white font-heading font-bold text-lg mb-2">E-book Template Pack</h4>
+            <span class="text-white/80 text-xs bg-white/20 px-3 py-1 rounded-full">Produk Digital</span>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="port-card fade-up group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer" data-cat="video">
+          <div class="absolute inset-0 bg-[#162b20]"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center">
+              <div class="flex items-end gap-1 justify-center h-16 mb-3">
+                <div class="w-4 bg-brand/30 rounded-t" style="height:30%"></div>
+                <div class="w-4 bg-brand/50 rounded-t" style="height:60%"></div>
+                <div class="w-4 bg-brand rounded-t" style="height:90%"></div>
+                <div class="w-4 bg-brand/40 rounded-t" style="height:45%"></div>
+                <div class="w-4 bg-brand/60 rounded-t" style="height:70%"></div>
+              </div>
+              <div class="w-24 h-2 bg-muted/30 rounded mx-auto"></div>
+            </div>
+          </div>
+          <div class="absolute inset-0 bg-brand/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h4 class="text-white font-heading font-bold text-lg mb-2">Product Launch Video</h4>
+            <span class="text-white/80 text-xs bg-white/20 px-3 py-1 rounded-full">Video Editing</span>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="port-card fade-up group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer" data-cat="sosmed" style="transition-delay:0.1s">
+          <div class="absolute inset-0 bg-[#1e3a2e]"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-14 h-14 rounded-full bg-muted/20 mx-auto mb-3 flex items-center justify-center">
+                <div class="w-8 h-8 rounded-full bg-brand/30"></div>
+              </div>
+              <div class="w-20 h-2 bg-muted/30 rounded mx-auto mb-2"></div>
+              <div class="flex gap-2 justify-center">
+                <div class="w-8 h-1.5 bg-muted/20 rounded"></div>
+                <div class="w-12 h-1.5 bg-brand/30 rounded"></div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute inset-0 bg-brand/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h4 class="text-white font-heading font-bold text-lg mb-2">TikTok Content Strategy</h4>
+            <span class="text-white/80 text-xs bg-white/20 px-3 py-1 rounded-full">Media Sosial</span>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="port-card fade-up group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer" data-cat="digital" style="transition-delay:0.2s">
+          <div class="absolute inset-0 bg-[#132a1e]"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center">
+              <div class="flex gap-2 justify-center mb-3">
+                <div class="w-14 h-20 bg-muted/15 rounded-lg flex items-center justify-center">
+                  <div class="w-8 h-2 bg-brand/30 rounded"></div>
+                </div>
+                <div class="w-14 h-20 bg-brand/15 rounded-lg flex items-center justify-center">
+                  <div class="w-8 h-2 bg-brand/40 rounded"></div>
+                </div>
+              </div>
+              <div class="w-20 h-2 bg-muted/30 rounded mx-auto"></div>
+            </div>
+          </div>
+          <div class="absolute inset-0 bg-brand/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h4 class="text-white font-heading font-bold text-lg mb-2">Social Media Preset</h4>
+            <span class="text-white/80 text-xs bg-white/20 px-3 py-1 rounded-full">Produk Digital</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. TESTIMONIALS ============ -->
+  <section id="testimonials" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16 fade-up">
+        <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-dark">Testimoni</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="fade-up border border-gray-100 rounded-2xl p-8">
+          <div class="star mb-4">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-dark/80 text-sm italic leading-relaxed mb-6">"Konten yang dihasilkan Reirafa Digital benar-benar meningkatkan engagement kami hingga 3x lipat. Tim mereka responsif dan sangat memahami kebutuhan brand."</p>
+          <div>
+            <p class="font-heading font-bold text-dark">Andi Pratama</p>
+            <p class="text-muted text-sm">F&B Business Owner</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="fade-up border border-gray-100 rounded-2xl p-8" style="transition-delay:0.1s">
+          <div class="star mb-4">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-dark/80 text-sm italic leading-relaxed mb-6">"Template dan preset dari Reirafa sangat premium. Kualitas produk digitalnya sudah setara dengan yang dijual di marketplace internasional."</p>
+          <div>
+            <p class="font-heading font-bold text-dark">Sarah Wijaya</p>
+            <p class="text-muted text-sm">Content Creator</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="fade-up border border-gray-100 rounded-2xl p-8" style="transition-delay:0.2s">
+          <div class="star mb-4">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-dark/80 text-sm italic leading-relaxed mb-6">"Manajemen media sosial dari Reirafa membuat akun bisnis kami sangat profesional. Followers kami naik signifikan dalam 2 bulan pertama."</p>
+          <div>
+            <p class="font-heading font-bold text-dark">Rizky Maulana</p>
+            <p class="text-muted text-sm">Fashion Brand Owner</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 9. FINAL CTA ============ -->
+  <section id="cta" class="py-20 md:py-28 bg-brand">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center fade-up">
+      <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-white mb-6">Siap Bawa Brand Kamu ke Level Berikutnya?</h2>
+      <p class="text-white/80 text-lg mb-10 max-w-xl mx-auto">Mulai proyek pertama kamu bersama Reirafa Digital. Konsultasi gratis, tanpa komitmen.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="#" class="bg-white text-brand font-semibold px-8 py-3.5 rounded-full hover:bg-white/90 transition-colors text-sm">
+          Mulai Sekarang
+        </a>
+        <a href="#" class="border-2 border-white text-white font-semibold px-8 py-3.5 rounded-full hover:bg-white hover:text-brand transition-colors text-sm">
+          Hubungi via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 10. FOOTER ============ -->
+  <footer class="bg-footerbg text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <!-- Brand col -->
+        <div>
+          <a href="#" class="font-heading font-black text-xl block mb-4">Reirafa<span class="text-brand">Digital</span></a>
+          <p class="text-muted text-sm leading-relaxed mb-6">Agensi kreatif digital yang membantu brand kamu tumbuh lewat konten berkualitas tinggi.</p>
+          <div class="flex gap-4">
+            <a href="#" class="text-muted hover:text-brand transition-colors" aria-label="Instagram">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.25-2a.875.875 0 110 1.75.875.875 0 010-1.75z"/></svg>
+            </a>
+            <a href="#" class="text-muted hover:text-brand transition-colors" aria-label="TikTok">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M16.6 5.82A4.278 4.278 0 0115.54 3h-3.09v12.4a2.592 2.592 0 01-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 004.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>
+            </a>
+            <a href="#" class="text-muted hover:text-brand transition-colors" aria-label="YouTube">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 002.12 2.14c1.84.55 9.38.55 9.38.55s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+            </a>
+            <a href="#" class="text-muted hover:text-brand transition-colors" aria-label="LinkedIn">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.66H9.37V9h3.41v1.56h.05a3.74 3.74 0 013.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links col 1 -->
+        <div>
+          <h4 class="font-heading font-bold text-sm uppercase tracking-widest mb-4">Layanan</h4>
+          <ul class="space-y-3 text-sm text-muted">
+            <li><a href="#services" class="hover:text-brand transition-colors">Video Editing</a></li>
+            <li><a href="#services" class="hover:text-brand transition-colors">Manajemen Media Sosial</a></li>
+            <li><a href="#services" class="hover:text-brand transition-colors">Produk Digital</a></li>
+            <li><a href="#services" class="hover:text-brand transition-colors">Konsultasi</a></li>
+          </ul>
+        </div>
+
+        <!-- Links col 2 -->
+        <div>
+          <h4 class="font-heading font-bold text-sm uppercase tracking-widest mb-4">Perusahaan</h4>
+          <ul class="space-y-3 text-sm text-muted">
+            <li><a href="#why-us" class="hover:text-brand transition-colors">Tentang Kami</a></li>
+            <li><a href="#portfolio" class="hover:text-brand transition-colors">Portfolio</a></li>
+            <li><a href="#testimonials" class="hover:text-brand transition-colors">Testimoni</a></li>
+            <li><a href="#cta" class="hover:text-brand transition-colors">Karir</a></li>
+          </ul>
+        </div>
+
+        <!-- Links col 3 -->
+        <div>
+          <h4 class="font-heading font-bold text-sm uppercase tracking-widest mb-4">Bantuan</h4>
+          <ul class="space-y-3 text-sm text-muted">
+            <li><a href="#" class="hover:text-brand transition-colors">FAQ</a></li>
+            <li><a href="#" class="hover:text-brand transition-colors">Syarat & Ketentuan</a></li>
+            <li><a href="#" class="hover:text-brand transition-colors">Kebijakan Privasi</a></li>
+            <li><a href="#cta" class="hover:text-brand transition-colors">Hubungi Kami</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-muted/20 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted">
+        <p>&copy; 2026 Reirafa Digital. All rights reserved.</p>
+        <p>Crafted with precision by Reirafa Digital</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ JAVASCRIPT ============ -->
+  <script src="style.js"></script>
+
+</body>
+</html>
